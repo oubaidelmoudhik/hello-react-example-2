@@ -6,6 +6,12 @@ class Counter extends React.Component {
   increment = () => {
     this.setState({ counter: this.state.counter + 1 });
   };
+  componentDidMount() {
+    this.setState({ counter: 42 });
+  }
+  componentDidUpdate() {
+    console.log('Number of clicks: ' + this.state.counter);
+  }
   render() {
     return (
       <div>
